@@ -1,0 +1,325 @@
+/* Add your CSS styles here */
+.topnav {
+    overflow: hidden;
+    background-color: #1D263B;
+}
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 17px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ffff;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.content {
+    padding: 20px;
+}
+
+header {
+    background-color: #2A324B;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Overpass', sans-serif;
+}
+
+
+/* flashcard style */
+.flashcard {
+  width: 300px;
+  height: 200px;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  
+  margin: 0 auto;
+  margin-bottom: 10px;
+    margin-top: 10px;
+ 
+  padding: 20px;
+  perspective: 1000px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+  z-index: 2; 
+}
+
+.card-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 1.5;
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+
+.flashcard.flipped .card {
+  transform: rotateY(180deg);
+}
+
+
+body {
+    background-color: #9aa5c7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: white; 
+    font-family: inherit;
+    width: 100%;
+    margin-bottom: 20px; 
+}
+
+
+p {
+    color: white; 
+    font-family: inherit; 
+    background-color: #2A324B;
+    width: 100%;
+    margin-bottom: 20px; 
+    text-align: center;
+}
+
+ul {
+    align-items: center;
+    color: white; 
+    font-family: inherit; 
+     text-align: center;
+
+    margin: 0;
+    background-color: #2A324B;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px; 
+}
+
+
+h2, h3, h4, h5, h6, ul, p {
+    align-items: center;
+    background-color: #2A324B; 
+    padding-top: 15px; 
+    padding-bottom: 15px; 
+    padding-right: 100px;
+    padding-left: 100px;
+    border: 3px solid #9aa5c7;
+    font-family: 'Overpass', sans-serif;
+    font-weight: 900;
+
+    margin: 0; 
+    width: 100%;
+    box-sizing: border-box;
+    text-align: justify;
+    display: box;
+
+    text-align: center;
+}
+
+img {
+    margin: 0px;
+    
+    border: 1px solid #ffff;
+    border-radius: 2px; 
+}
+
+ul{
+     list-style-type: none;
+}
+
+.chart img,
+.chart p {
+    display: inline-block;
+    vertical-align: middle;
+    
+    
+}
+.chart img {
+    display: inline-block;
+    vertical-align: middle; 
+   
+}
+
+.chart p {
+    
+   width: 40%;
+    
+}
+
+.chart img,
+.chart-paragraph {
+    display: inline-block;
+    vertical-align: middle;
+    
+}
+
+.chart-paragraph {
+    padding-right: 50px;
+    padding-left: 50px; 
+}
+
+.image2 img {
+    display: block;
+    margin: 0 auto;
+    padding-left: 0; 
+    padding-right: 0;
+    border-left: none; 
+    border-right: none;
+    border-width: 0 150px;
+    border-style: solid; 
+    border-color: #ffff; 
+    
+}
+
+
+
+
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.question {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.question h3 {
+    margin-bottom: 10px;
+}
+
+.answer-choice button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: #2A324B;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.answer-choice button:hover {
+    background-color: #2A324B;
+}
+
+#result {
+    margin-top: 20px;
+}
+
+#restart {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.negativeImg { 
+    display: block;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.diagram1{
+    display: block;
+    width: 38%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.diagram2{
+    display: block;
+    width: 38%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.diagram3{
+    display: block;
+    width: 38%;
+    margin-left: auto;
+    margin-right: auto;
+}

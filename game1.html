@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+ <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personality Type Quiz</title>
+  <link rel="stylesheet" href="style.css">
+  </head>
+
+ <body>
+
+ <div class="topnav">
+  <a href="index.html">Home</a>
+<div class="dropdown">
+ <button class="dropbtn">Units
+<i class="fa fa-caret-down"></i>
+ </button>
+<div class="dropdown-content">
+<a href="units.html">ALL UNITS</a>
+<a href="u1.html">Unit 1</a>
+<a href="u2.html">Unit 2</a>
+<a href="u3.html">Unit 3</a>
+<a href="u4.html">Unit 4</a>
+<a href="u5.html">Unit 5</a>
+<a href="u6.html">Unit 6</a>
+<a href="u7.html">Unit 7</a>
+<a href="u8.html">Unit 8</a>
+<a href="u9.html">Unit 9</a>
+</div>
+</div>
+<div class="dropdown">
+ <button class="dropbtn">Review
+ <i class="fa fa-caret-down"></i>
+</button>
+<div class="dropdown-content">
+<a href="game1.html">Game 1</a>
+<a href="game2.html">Game 2</a>
+
+           </div>
+     </div>
+   <a href="resources.html">Resources</a>
+        </div>
+
+        <header>
+      <h1>Personality Type Quiz</h1>
+        </header>
+
+  <section id="home" class="content">
+      <h2>Find out if you have a Type A or Type B personality!</h2>
+
+        <div class="question">
+        <h3>When you have a major project due, when do you start working on it?</h3>
+         <div class="answer-choice">
+     <button id="q1a1">Start well ahead of the due date and set small deadlines leading up to the actual deadline</button>
+       </div>
+<div class="answer-choice">
+  <button id="q1a2">Wait until the deadline approaches and complete the project in one long work period</button>
+     </div>
+  </div>
+ <div class="question">
+     <h3>If someone is driving slowly on the road, how do you react?</h3>
+  <div class="answer-choice">
+   <button id="q2a1">I become irritated</button>
+  </div>
+  <div class="answer-choice">
+  <button id="q2a2">I remain calm and unbothered</button>
+           </div>
+        </div>
+   <div class="question">
+           <h3>How would you plan your dream vacation?</h3>
+       <div class="answer-choice">
+                    <button id="q3a1">I would figure out every last detail and keep everything on a schedule</button>
+         </div>
+       <div class="answer-choice">
+        <button id="q3a2">I wouldn't plan much, I'd rather make spontaneous plans</button>
+           </div>
+         </div>
+
+            <h2 id="result">Your result is...</h2>
+
+   <button id="restart">Restart</button>
+
+   </section>
+
+          <script>
+                var scoreA = 0; // store type a score
+           var scoreB = 0; // store type b score
+          var button = document.getElementById("restart");
+
+      var questionCount = 0; // store number of answers clicked
+  var result = document.getElementById("result");
+
+       var q1a1 = document.getElementById("q1a1");
+       var q1a2 = document.getElementById("q1a2");
+
+        var q2a1 = document.getElementById("q2a1");
+       var q2a2 = document.getElementById("q2a2");
+ 
+              var q3a1 = document.getElementById("q3a1");
+              var q3a2 = document.getElementById("q3a2");
+
+      button.addEventListener("click", myButton);
+
+    q1a1.addEventListener("click", typeA);
+    q1a2.addEventListener("click", typeB);
+
+        q2a1.addEventListener("click", typeA);
+        q2a2.addEventListener("click", typeB);
+
+        q3a1.addEventListener("click", typeA);
+        q3a2.addEventListener("click", typeB);
+
+                                    function typeA() {
+                                        scoreA += 1;
+                                        questionCount += 1;
+                                        console.log("questionCount = " + questionCount + ", ScoreA = " + scoreA);
+
+                                        if (questionCount == 3) {
+                                            console.log('The quiz is Done');
+                                            updateResult();
+                                        }
+                                    }
+
+                                    function typeB() {
+                                        scoreB += 1;
+                                        questionCount += 1;
+                                        console.log("questionCount = " + questionCount + ", ScoreB = " + scoreB);
+
+                                        if (questionCount == 3) {
+                   console.log('The quiz is Done');
+              updateResult();
+                                        }
+                                    }
+
+                                    // update quiz result
+                                    function updateResult() {
+                                        if (scoreA >= 2) {
+                                            result.textContent = "You are Type A";
+                                            console.log("You are Type A");
+                                        } else if (scoreB >= 2) {
+                                            result.textContent = "You are Type B";
+                                            console.log("You are Type B");
+                                        }
+                                    }
+
+         function myButton() {
+     scoreA = 0;
+     scoreB = 0;
+  questionCount = 0;
+              result.textContent = "Your result is...";
+                                    }
+                                </script>
+
+                            </body>
+
+                            </html>
